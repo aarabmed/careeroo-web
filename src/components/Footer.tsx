@@ -38,7 +38,7 @@ export default function Footer() {
                 <div className="w-1/3 p-4 flex justify-center items-center flex-col">
                     
                     <h4 className='mx-4 py-1 my-2 '>Mobile App:</h4>
-                    <Link href="/https://play.google.com/store/apps/details?id=com.careeroo.mobile" className="px-0 my-2  py-1 mx-4 text-gray-400 font-medium transition-all duration-700 active:translate-y-2 "><Image priority src={GooglePlay} alt='google careeroo search jobs app' height={60}/></Link> 
+                    <Link href="https://play.google.com/store/apps/details?id=com.careeroo.mobile" className="px-0 my-2  py-1 mx-4 text-gray-400 font-medium transition-all duration-700 active:translate-y-2 "><Image priority src={GooglePlay} alt='google careeroo search jobs app' height={60}/></Link> 
                     <h4 className='mt-6 py-1 my-2'>Find us on Social Media:</h4>
                     <div className=''>
                         <SocialIcon network='instagram' url="" style={{margin:'8px'}}/>

@@ -21,7 +21,7 @@ import {useCollapse} from "react-collapsed";
 
 import 'simplebar-react/dist/simplebar.min.css';
 import { getCategories } from '@/services/category';
-import { getSingleJob } from '@/services/jobs';
+import { findJobs, getSingleJob } from '@/services/jobs';
 import { Option } from 'react-tailwindcss-select/dist/components/type';
 
 const axiosInstance = axios.create({
@@ -470,7 +470,7 @@ export default function FindJobs() {
         try {
             const query = getParams();
             console.log('query-preview:', query);
-            const { status, data } = await axiosInstance.get(`/api/articles/search/`, { params: query });
+            const {data} = await findJobs(query)
             setRevalidate(false);
             console.log('data:', data);
             setTimeout(() => {
@@ -493,7 +493,7 @@ export default function FindJobs() {
         try {
             const query = getParams();
             console.log('query:', query);
-            const { status, data } = await axiosInstance.get(`/api/articles/search/`, { params: query });
+            const {data} = await findJobs(query)
             setRevalidate(false);
             console.log('data:', data);
             setData(data);

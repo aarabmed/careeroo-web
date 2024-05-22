@@ -41,12 +41,11 @@ const DropDown:React.FC<DropDown> = ({data})=>{
     }
 
     const isActive =  pathname
-    return <Menu as="div" onMouseEnter={onHover} onMouseLeave={onLeaveHover} className="relative text-gray-700 px-3 py-4 mx-4 text-gray-700  font-medium transition-all duration-700 active:translate-y-2 uppercase">
-                <div>
-                    <Menu.Button ref={buttonRef}  className="relative flex ">
-                        <p className={classNames(isActive.split('/').includes(data.url.split('/')[1])?'border-b-[3px] border-cyan-400':'','text-gray-700 mx-4 text-gray-700  font-medium uppercase')}>{data.name}</p>
-                    </Menu.Button>
-                </div>
+    return <Menu as="div" onMouseEnter={onHover} onMouseLeave={onLeaveHover} className="relative text-gray-700 px-3 py-4 mx-4 text-gray-700 focus-visible:outline-none  font-medium transition-all duration-700 active:translate-y-2 uppercase">
+                <Menu.Button ref={buttonRef}  className="relative flex focus-visible:outline-none ">
+                    <p className={classNames(isActive.split('/').includes(data.url.split('/')[1])?'border-b-[3px] border-cyan-400':'','text-gray-700 mx-4 text-gray-700  font-medium uppercase')}>{data.name}</p>
+                </Menu.Button>
+                
                 <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"

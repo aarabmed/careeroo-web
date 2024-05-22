@@ -26,7 +26,7 @@ export default function RootLayout({
             <Footer/>
           </StoreProvider>
       </body>
-      {/* <GoogleTagManager gtmId="GTM-PBG99HM8"/> */}
+      <GoogleTagManager gtmId="GTM-PBG99HM8"/>
     </html>
   );
 }
